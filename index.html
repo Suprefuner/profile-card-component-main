@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Profile card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+      :root {
+        /* Primary */
+        --dark-cyan: hsl(185, 75%, 39%);
+        --dark-blue: hsl(229, 23%, 23%);
+        --dark-grayish-blue: hsl(227, 10%, 46%);
+
+        /* Neutral */
+        --dark-gray: hsl(0, 0%, 59%);
+
+        /* font-weight */
+        --fw-regular: 400;
+        --fw-bold: 700;
+
+        --border-radius: 10px;
+      }
+
+      html {
+        font-size: 100%;
+        box-sizing: border-box;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Kumbh Sans", sans-serif;
+        box-sizing: inherit;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url("images/bg-pattern-top.svg") no-repeat right 50vw bottom
+            50vh,
+          url("images/bg-pattern-bottom.svg") no-repeat left 50vw top 50vh;
+        background-color: var(--dark-cyan);
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      .container {
+        width: 90%;
+        max-width: 330px;
+      }
+
+      .sr-only {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+
+      .card {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: var(--border-radius);
+        margin-bottom: 2rem;
+        box-shadow: 0 25px 50px -10px hsl(229 23% 23%/0.5);
+      }
+
+      .hero {
+        background: url("images/bg-pattern-card.svg");
+        width: 100%;
+        height: 150px;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+      }
+
+      .profile-group {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgb(199, 199, 199);
+      }
+
+      .profile-pic img {
+        border-radius: 50%;
+        outline: 5px solid white;
+        vertical-align: middle;
+        transform: translateY(-50%);
+        margin-bottom: -1.5rem;
+      }
+
+      .name {
+        font-size: 1.2rem;
+        font-weight: var(--fw-bold);
+      }
+
+      .age {
+        color: var(--dark-gray);
+        font-weight: var(--fw-regular);
+        margin-left: 0.3rem;
+      }
+
+      .location {
+        color: var(--dark-gray);
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+      }
+
+      .data-group {
+        width: 100%;
+        display: flex;
+        padding-block: 1.5rem;
+        text-align: center;
+        justify-content: space-evenly;
+      }
+
+      .data span {
+        display: block;
+        font-weight: var(--fw-bold);
+        font-size: 1.2rem;
+        color: var(--dark-blue);
+      }
+
+      .data {
+        font-size: 0.8rem;
+        color: var(--dark-gray);
+      }
+
+      @media screen and (max-width: 375px) {
+        body {
+          background: url("images/bg-pattern-top.svg") no-repeat right 40vw
+              bottom 50vh,
+            url("images/bg-pattern-bottom.svg") no-repeat left 40vw top 50vh;
+          background-color: var(--dark-cyan);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="sr-only">Profile card component</h1>
+      <section class="card">
+        <div class="hero"></div>
+        <div class="profile-group">
+          <div class="profile-pic">
+            <img src="images/image-victor.jpg" alt="" />
+          </div>
+          <h2 class="name">Victor Crest <span class="age">26</span></h2>
+          <p class="location">London</p>
+        </div>
+        <div class="data-group">
+          <p class="data"><span>80K</span>Followers</p>
+          <p class="data"><span>803K</span>Likes</p>
+          <p class="data"><span>1.4K</span>Photos</p>
+        </div>
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Joe Jai</a>.
+    </div>
+  </body>
+</html>
